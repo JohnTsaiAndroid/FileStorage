@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 # -*- coding: UTF-8 -*-
 
-$URL_PREFIX = "https://raw.githubusercontent.com/JohnTsaiAndroid/FileStorage/master/img/"
+$URL_PREFIX = "https://raw.githubusercontent.com/JohnTsaiAndroid/FileStorage/master/image/"
 $IMG_SUFFIX_ARRAY = ['.png','.jpg','.gif']
 
 current_dir = Dir.pwd
