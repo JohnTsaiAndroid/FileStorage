@@ -4,7 +4,7 @@
 
 system('git status')
 system('git add .')
-system('git commit -am "add image with ruby script"')
+system('git commit -am "add file with ruby script"')
 system('git push')
 
 puts 'upload image with git!'

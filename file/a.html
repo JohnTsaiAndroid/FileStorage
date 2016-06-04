@@ -1,0 +1,47 @@
+<!doctype html><html><head><meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' /><meta charset='utf-8'><link rel="stylesheet" type="text/css" href="http://cdncase.ileou.com/ecms/Tpl/Game/Index/css/gamecomon.css"><title>ElloJump - ELLO3DGAMES</title><script src="http://cdncase.ileou.com/libs/jquery/1.9.1/jquery.min.js"></script><script src="http://cdncase.ileou.com/ecms/Tpl/Home/Ellojump/playcanvas-stable.min.js"></script><script>        SCENE_PATH = "http://cdncase.ileou.com/ecms/Tpl/Home/Ellojump/422768.json";
+        CONTEXT_OPTIONS = {
+            'alpha': false,
+            'preserveDrawingBuffer': false
+        };
+    </script></head><body><script src="http://cdncase.ileou.com/ecms/Tpl/Home/Ellojump/__start__.js"></script><script src="http://cdncase.ileou.com/ecms/Tpl/Home/Ellojump/__loading__.js"></script><script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript"></script><script>    var posturl="http://demo.ileou.com/Home/Ellojump/recordScore",
+            gameid=4;
+    userinfo={
+        id : '3706748',
+        name: 'CJ',
+        topscore: '209',
+        status: '1'
+    },
+            gameinfo={
+                friendranksurl: "http://demo.ileou.com/Home/Ellojump/getFriendsRanks/userid/"+userinfo.id,
+                allranksurl: "http://demo.ileou.com/Home/Ellojump/getrank/isajax/1",
+                posturl: "http://demo.ileou.com/Home/Ellojump/recordScore"
+            },
+    shareobj = {
+        'title': "ElloJump - ELLO3DGAMES",
+        'desc': "ElloJump - 秒杀手残党的蹦蹦跳游戏，看看懵逼的你能蹦跶多少下。",
+        'link': "http://demo.ileou.com/Home/Ellojump?inviteid="+userinfo.id+"&invitegame=3",
+        'imgUrl': "http://cdncase.ileou.com/ecms/Tpl/Home/Ellojump/img/shareimg.png"
+    };
+</script><script src="http://cdncase.ileou.com/assets/game/game.js" type="text/javascript"></script><script>    function setGameoverShare(scoreinfo){
+
+        var scorenum=143435425695;
+        shareobj.title='ElloJump！手残党慎入，我蹦跶了'+scorenum+'下';
+
+        //判断最高分方案
+        if(scorenum > userinfo.topscore){
+            shareobj.desc='我的天呐！我一不小心打破了自己的记录！';
+            $("#rank2").html('我的天呐！<br>一不小心打破了自己的记录！');
+            userinfo.topscore = scorenum;
+        }else{
+            $("#rank2").html('BEST：'+ userinfo.topscore);
+        }
+        setsharemsg();
+    }
+</script><script>    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?7bc6efdf31e34cb2a93cd22310d33394";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script></body></html>
